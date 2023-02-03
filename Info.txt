@@ -1,0 +1,10 @@
+
+#shows the existing images
+docker images ps
+
+#shows the all containers 
+docker ps -a
+
+#shows more info about the images
+docker image inspect <<id>>
+
