@@ -8,3 +8,15 @@ docker ps -a
 #shows more info about the images
 docker image inspect <<id>>
 
+#copy files to a container or from a container
+docker cp <source> <destination>
+example: docker cp myfile.txt boting_container:/text
+
+#naming and tagging containers & images  !For images is (name:tag)!
+docker run -p 3000:80 -d --rm --name marcopolo_container 2effd43aa44 //this will create a container with name marcopolo_container
+docker build -t marcopolo:1.0 . //this will create an image with name:Marcopolo and tag: 1.0
+docker run -p 3000:80 -d --rm --name marcopolo_container marcopolo:1.0 //this will create a container with name marcopolo_container from image marcopolo:1.0
+
+
+#run an image created
+docker run 
